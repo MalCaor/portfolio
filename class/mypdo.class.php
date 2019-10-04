@@ -40,6 +40,8 @@ class mypdo extends PDO{
     where a.page=p.id
     and p.title="'.$title.'"
     and a.salarie = s.id
+    and now() > a.date_deb
+    and now() < a.date_fin
     ;';
 
     	$result=$this->connexion ->query($requete);
