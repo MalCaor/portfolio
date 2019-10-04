@@ -34,7 +34,13 @@ class mypdo extends PDO{
     public function liste_article($title)
     {
 
-		$requete='select a.h3,a.corps from article a,page p where a.page=p.id and p.title="'.$title.'";';
+		$requete='
+    select a.h3, a.corps, s.nom, s.prenom
+    from article a, page p, salarie s
+    where a.page=p.id
+    and p.title="'.$title.'"
+    and a.salarie = s.id
+    ;';
 
     	$result=$this->connexion ->query($requete);
     	if ($result)
