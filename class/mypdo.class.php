@@ -42,6 +42,7 @@ class mypdo extends PDO{
     and a.salarie = s.id
     and now() > a.date_deb
     and now() < a.date_fin
+    order by a.num_ordre asc
     ;';
 
     	$result=$this->connexion ->query($requete);
