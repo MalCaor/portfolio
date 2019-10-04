@@ -9,7 +9,7 @@ class page_base {
 	protected $page;
 	protected $metadescription="Bienvenue sur le site de promotion des sites touristiques de FRANCE";
 	protected $metakeyword=array('france','site touristique','tourisme','géolocalisation' );
-	protected $path='http://localhost/php_mvc_pdo_xavier/';
+	protected $path='http://localhost/php_mvc_pdo_xavier';
 
 	public function __construct() {
 		$numargs = func_num_args();
