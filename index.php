@@ -13,7 +13,7 @@
 	}
 	switch ($params[1]) {
 		case 'accueil' :
-			$site->titre='Accueil';
+			$site = new page_base('Accueil');
 			$site-> right_sidebar=$site->rempli_right_sidebar();
 			$site-> left_sidebar=$controleur->retourne_article($site->titre);
 			$site->affiche();
@@ -33,12 +33,12 @@
 			session_destroy();
 			echo '<script>document.location.href="index.php"; </script>';
 			break;
-		default: 
+		default:
 			$site->titre='Accueil';
 			$site-> right_sidebar=$site->rempli_right_sidebar();
 			$site-> left_sidebar='<img src="'.$site->path.'/image/erreur-404.png" alt="Erreur de liens">';
 			$site->affiche();
 			break;
-	}	
-	
+	}
+
 ?>
