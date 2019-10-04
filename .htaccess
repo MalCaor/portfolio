@@ -1,10 +1,9 @@
 RewriteEngine on
 
-RewriteBase /TPPHP-2019/
+RewriteBase /PHP_MVC_PDO_Xavier/
 
 RewriteCond %{REQUEST_FILENAME} !-l
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteRule ^(.*)$ index.php [QSA,L]
-
