@@ -86,8 +86,12 @@ strong {
 }
 
 /* SlidShow */
-slideshow-container {
-	max-height:150;
+/* slider */
+.item {
+	background-position: 50% !important;
+	object-fit: cover;
+	width: 100% !important;
+	height:auto !important;
 }
 
 
