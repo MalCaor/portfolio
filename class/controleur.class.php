@@ -112,12 +112,33 @@ public function dataTable(){
     </tr>
 	</thead>
 	<tbody>
+'.$this->codeDep().'
 	</tbody>
 </table>
 </div>
 	';
 }
 
+public function codeDep(){
+	$retour = "";
+	$result = $this->vpdo->liste_dep();
+	if ($result != false) {
+		while ( $row = $result->fetch ( PDO::FETCH_OBJ ) )
+		// parcourir chaque ligne sélectionnée
+		{
+
+			$retour = $retour . '
+			<tr>
+				<td>'.$row->departement_code.'</td>
+				<td>'.$row->departement_nom.'</td>
+				<td>'.$row->libel.'</td>
+			</tr>
+			';
+		}
+		return $retour;
+}
+
+}
 }
 
 ?>
