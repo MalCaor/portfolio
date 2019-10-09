@@ -139,6 +139,7 @@ class page_base {
 		echo '
 				<ul >
 					<li ><a   href="'.$this->path.'/Accueil" >Accueil </a></li>
+					<li ><a   href="'.$this->path.'/departement" >departement </a></li>
 				</ul>';
 	}
 	protected function affiche_menu_connexion() {

@@ -100,7 +100,23 @@ public function affiche_slider() {
 </div>
 	';
 }
-
+public function dataTable(){
+	return'
+	<div class="table-responsive">
+	<table id="dataTable" class="table-striped table-bordered" cellspacing="0">
+	<thead>
+    <tr>
+			<th>Code département</th>
+			<th>Département</th>
+			<th>Région</th>
+    </tr>
+	</thead>
+	<tbody>
+	</tbody>
+</table>
+</div>
+	';
+}
 
 }
 
