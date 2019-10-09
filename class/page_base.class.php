@@ -238,7 +238,7 @@ class page_base {
 						<?php $this->affiche_footer_menu(); ?>
 
   						<div style="clear:both;">
-								<div id="slider" style="width:100%;">
+								<div id="slider" style="height:25%;width:25%;overflow: hidden;">
      							<?php echo $this->slider; ?>
     						</div>
     						<div style="float:left;width:75%;">

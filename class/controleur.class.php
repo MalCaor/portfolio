@@ -85,7 +85,7 @@ class controleur {
 public function affiche_slider() {
 	return '
 
-	<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+	<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" style="height:auto%;width:100%;display:block;">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img class="d-block w-100" src="image\france\data1\images de base\Cirque-de-gavarnie-Classic-.jpg" alt="First slide">
