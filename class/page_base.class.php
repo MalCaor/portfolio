@@ -3,6 +3,7 @@
 class page_base {
 	protected $right_sidebar;
 	protected $left_sidebar;
+	protected $slider;
 	protected $titre;
 	protected $js=array('jquery-3.4.1.min','bootstrap.min');
 	protected $css=array('perso','bootstrap.min','base', 'modele');
@@ -23,6 +24,10 @@ class page_base {
 		switch ($propriete) {
 			case 'css' : {
 				$this->css[count($this->css)+1] = $valeur;
+				break;
+			}
+			case 'slider' : {
+				$this->slider = $valeur;
 				break;
 			}
 			case 'js' : {
@@ -204,32 +209,7 @@ class page_base {
 		';
 	}
 
-	/****************************************** Affichage du slider de Menu ***************************/
-private function affiche_slider() {
-	echo '
-	<!-- SlideShow Menu Container -->
-	<div class = "slideshow-container">
-		<!-- Full-width images with number and caption text -->
-		<div class="mySlides fade">
-			<div class="numbertext">1 / 3</div>
-			<img src="img1.jpg" style="width:100%">
-			<div class="text">Caption Text</div>
-		</div>
 
-		<div class="mySlides fade">
-			<div class="numbertext">2 / 3</div>
-			<img src="img2.jpg" style="width:100%">
-			<div class="text">Caption Two</div>
-		</div>
-
-		<div class="mySlides fade">
-		<div class="numbertext">3 / 3</div>
-		<img src="img3.jpg" style="width:100%">
-		<div class="text">Caption Three</div>
-	</div>
-</div>
-	';
-}
 
 	/********************************************* Fonction permettant l'affichage de la page ****************/
 
@@ -258,6 +238,9 @@ private function affiche_slider() {
 						<?php $this->affiche_footer_menu(); ?>
 
   						<div style="clear:both;">
+								<div id="slider" style="width:100%;">
+     							<?php echo $this->slider; ?>
+    						</div>
     						<div style="float:left;width:75%;">
      							<?php echo $this->left_sidebar; ?>
     						</div>

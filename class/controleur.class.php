@@ -81,6 +81,25 @@ class controleur {
 		// retourner le résultat final
 		return $mdp;
 	}
+	/****************************************** Affichage du slider de Menu ***************************/
+public function affiche_slider() {
+	return '
+
+	<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="image\france\data1\images de base\Cirque-de-gavarnie-Classic-.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="image\france\data1\images de base\Pont-dArc-gorges_ardeche.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="image\france\data1\images de base\etretat.jpg" alt="Third slide">
+    </div>
+  </div>
+</div>
+	';
+}
 
 
 }

@@ -15,6 +15,7 @@
 		case 'accueil' :
 			$site = new page_base('Accueil');
 			$site-> right_sidebar=$site->rempli_right_sidebar();
+			$site-> slider=$controleur->affiche_slider();
 			$site-> left_sidebar=$controleur->retourne_article($site->titre);
 			$site->affiche();
 			break;
