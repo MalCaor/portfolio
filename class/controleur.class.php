@@ -136,9 +136,23 @@ public function codeDep(){
 			';
 		}
 		return $retour;
+	}
+}
+
+public function affiche_combo_departement(){
+	$vretour = '<select name = "list_dep">';
+	$result = $this->vpdo->liste_dep();
+		if ($result != false) {
+			while ( $row = $result->fetch ( PDO::FETCH_OBJ ) )
+			// parcourir chaque ligne sélectionnée
+			{
+
+				$vretour = $vretour . '
+					<option value='.$row->departement_code.'>'.$row->departement_nom.'</option>';
+			}
+	return $vretour.'</select>';
 }
 
 }
 }
-
 ?>

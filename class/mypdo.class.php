@@ -58,7 +58,12 @@ class mypdo extends PDO{
     public function liste_dep()
     {
 
-    	$requete='SELECT departement_code,departement_nom,libel FROM departement,region,departement_region WHERE departement_code= code_dep and code_reg=code order by departement_code;';
+    	$requete='
+      SELECT departement_code,departement_nom,libel
+      FROM departement,region,departement_region
+      WHERE departement_code= code_dep
+      and code_reg=code
+      order by departement_code;';
 
     	$result=$this->connexion ->query($requete);
     	if ($result)
