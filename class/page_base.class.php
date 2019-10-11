@@ -140,6 +140,7 @@ class page_base {
 				<ul >
 					<li ><a   href="'.$this->path.'/Accueil" >Accueil </a></li>
 					<li ><a   href="'.$this->path.'/departement" >departement </a></li>
+					<li ><a   href="'.$this->path.'/ville" >ville </a></li>
 				</ul>';
 	}
 	protected function affiche_menu_connexion() {

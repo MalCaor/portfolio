@@ -27,6 +27,10 @@
 			$site-> left_sidebar=$controleur->dataTable();
 			$site->affiche();
 			break;
+		case 'ville':
+				$site->js='ville';
+				$site->affiche();
+				break;
 		case 'connexion' :
 			$site->titre='Connexion';
 			$site->js='jquery.validate.min';
