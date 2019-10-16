@@ -140,7 +140,7 @@ public function codeDep(){
 }
 
 public function affiche_combo_departement(){
-	$vretour = '</br><select name = "list_dep">';
+	$vretour = '</br><select id="list_dep" onChange="js_change_dep()">';
 	$result = $this->vpdo->liste_dep();
 		if ($result != false) {
 			while ( $row = $result->fetch ( PDO::FETCH_OBJ ) )
