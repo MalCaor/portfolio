@@ -151,8 +151,9 @@ public function affiche_combo_departement(){
 					<option value='.$row->departement_code.'>'.$row->departement_nom.'</option>';
 			}
 	return $vretour.'</select>';
-}
+		}
+	}
 
-}
+	//public function  
 }
 ?>
