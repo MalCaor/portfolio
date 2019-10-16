@@ -79,8 +79,17 @@ class mypdo extends PDO{
       $requete='
       SELECT vr.ville_nom
       FROM villes_france_free vr, departement d
-      WHERE vr.ville_departement = d.departement_code 
-      AND d.departement_code = '$id';';
+      WHERE vr.ville_departement = d.departement_code
+      AND d.departement_code = '.$id.';';
+
+      $result=$this->connexion ->query($requete);
+    	if ($result)
+
+    	{
+
+    		return ($result);
+    	}
+    	return null;
     }
 
 }
