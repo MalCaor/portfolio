@@ -156,8 +156,7 @@ public function affiche_combo_departement(){
 
 public function affiche_combo_ville(){
 	$vretour = '</br><select id="list_ville">';
-	if(isset($_POST['id_dep'])){
-		$result = $this->vpdo->trouve_toutes_les_ville_via_un_departement($id);
+		$result = $this->vpdo->liste_ville();
 
 		if ($result != false) {
 			while ( $row = $result->fetch ( PDO::FETCH_OBJ ) )
@@ -165,11 +164,11 @@ public function affiche_combo_ville(){
 			{
 
 				$vretour = $vretour . '
-					<option value='.$row->ville_id.'>'.$row->ville_nom.'</option>';
+					<option value='.$row->ville_id.'></option>';
 			}
-	return $vretour.'</select>';
+			return $vretour.'</select>';
 		}
-	}
+	return null;
 	}
 }
 ?>

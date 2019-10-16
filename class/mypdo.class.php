@@ -74,10 +74,26 @@ class mypdo extends PDO{
     	}
     	return null;
     }
+    public function liste_ville()
+    {
+
+      $requete='
+      SELECT ville_id,ville_nom_reel
+      FROM villes_france_free';
+
+      $result=$this->connexion ->query($requete);
+      if ($result)
+
+      {
+
+        return ($result);
+      }
+      return null;
+    }
 
     public function trouve_toutes_les_ville_via_un_departement($id){
       $requete='
-      SELECT vr.ville_nom, vr.ville_id
+      SELECT vr.ville_nom_reel, vr.ville_id
       FROM villes_france_free vr, departement d
       WHERE vr.ville_departement = d.departement_code
       AND d.departement_code = '.$id.';';
