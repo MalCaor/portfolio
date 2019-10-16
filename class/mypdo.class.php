@@ -77,7 +77,7 @@ class mypdo extends PDO{
 
     public function trouve_toutes_les_ville_via_un_departement($id){
       $requete='
-      SELECT vr.ville_nom
+      SELECT vr.ville_nom, vr.ville_id
       FROM villes_france_free vr, departement d
       WHERE vr.ville_departement = d.departement_code
       AND d.departement_code = '.$id.';';
