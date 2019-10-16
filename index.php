@@ -30,6 +30,7 @@
 		case 'ville':
 				$site->js='ville';
 				$site-> left_sidebar=$controleur->affiche_combo_departement();
+				$site-> left_sidebar=$controleur->dataTable();
 				$site->affiche();
 				break;
 		case 'connexion' :
