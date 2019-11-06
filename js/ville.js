@@ -6,17 +6,22 @@ function js_change_dep(){
     alert(myselect.options[myselect.selectedIndex].value);
     $("#liste_ville").empty();//vide la combo box
     	$.ajax({
-       			type: "POST",
+       			      type: "POST",
             			url: "ajax/recherche_ville.php",
             			dataType: "json",
-    			encode          : true,
+    			        encode: true,
             			data: "id_dep="+myselect.options[myselect.selectedIndex].value, // on envoie via post l’id
             			success: function(retour) {
-alert (retour);
+
                 			$.each(retour, function(index, value)
                 			 { // pour chaque noeud JSON
                     		// on ajoute l option dans la liste
-                    			$("#list_ville").append("<option value="+ value +">"+ index +"</option>");
+                        //  alert(index);
+                        if(index != null || value != null)
+                        {
+                    			     $("#list_ville").append("<option value="+ value +">"+ index +"</option>");
+                        }
+
                         });
        						$("#list_ville").focus();
        					},

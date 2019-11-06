@@ -155,20 +155,9 @@ public function affiche_combo_departement(){
 	}
 
 public function affiche_combo_ville(){
-	$vretour = '</br><select id="list_ville">';
-		$result = $this->vpdo->liste_ville();
+	$vretour = '</br><select id="list_ville"></select>';
+	return $vretour;
 
-		if ($result != false) {
-			while ( $row = $result->fetch ( PDO::FETCH_OBJ ) )
-			// parcourir chaque ligne sélectionnée
-			{
-
-				$vretour = $vretour . '
-					<option value='.$row->ville_id.'></option>';
-			}
-			return $vretour.'</select>';
-		}
-	return null;
 	}
 }
 ?>

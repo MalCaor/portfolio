@@ -96,7 +96,8 @@ class mypdo extends PDO{
       SELECT vr.ville_nom_reel, vr.ville_id
       FROM villes_france_free vr, departement d
       WHERE vr.ville_departement = d.departement_code
-      AND d.departement_code = '.$id.';';
+      AND d.departement_code = '.$id.'
+       Order by vr.ville_nom_reel;';
 
       $result=$this->connexion ->query($requete);
     	if ($result)
