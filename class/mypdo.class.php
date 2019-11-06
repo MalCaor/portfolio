@@ -109,5 +109,21 @@ class mypdo extends PDO{
     	return null;
     }
 
+    public function info_ville($id){
+      $requete='
+      SELECT vr.ville_departement, vr.ville_code_postal, vr.ville_nom_reel, vr.ville_latitude_deg, vr.ville_longitude_deg
+      from villes_france_free vr
+      where vr.ville_id = '.$id;
+
+      $result=$this->connexion ->query($requete);
+      if ($result)
+      {
+        return($result);
+      }
+
+      return null;
+
+    }
+
 }
 ?>

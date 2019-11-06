@@ -155,9 +155,15 @@ public function affiche_combo_departement(){
 	}
 
 public function affiche_combo_ville(){
-	$vretour = '</br><select id="list_ville"></select>';
+	$vretour = '</br><select id="list_ville"  onChange="js_change_ville()"></select>';
 	return $vretour;
 
 	}
+
+public function affiche_info_ville(){
+	$vretour = '<div id="info_ville">
+							</div>';
+	return $vretour;
+}
 }
 ?>
