@@ -170,5 +170,42 @@ public function affiche_info_ville(){
 							</div>';
 	return $vretour;
 }
+
+public function ol_map(){
+	$vretour = '<head>
+  		<meta charset="UTF-8">
+    		<script src="ol/v6.1.1-dist/ol.js"></script>
+		<link rel="stylesheet" href="ol/v6.1.1-dist/ol.css">
+    		<style>
+      			.map {
+        				height: 400px;
+        				width: 100%;
+      			}
+    		</style>
+   		<script >
+   			function init(longi,latti) {
+var posi= [ longi,latti];
+var map = new ol.Map({
+target: "map",
+layers: [
+new ol.layer.Tile({
+source: new ol.source.OSM()
+})
+],
+view: new ol.View({
+center: ol.proj.fromLonLat(posi),
+zoom: 14
+        					})
+     				 });
+	  		}
+    		</script>
+    		<title>Merci OpenStreetMap</title>
+  	</head>
+  	<body onload="init(-1.553621,47.218371);">
+    		<h2>Ville</h2>
+   		 <div id="map" class="map"></div>
+ </body>';
+ return $vretour;
+}
 }
 ?>

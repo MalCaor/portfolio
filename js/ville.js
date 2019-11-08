@@ -52,6 +52,7 @@ function js_change_dep(){
       			        encode: true,
               			data: "id_dep="+myselect.options[myselect.selectedIndex].value, // on envoie via post l’id
               			success: function(retour) {
+                      //affiche les infos Ville
                       $("#ville_departement").val(retour ["ville_departement"]);
                       $("#ville_code_postal").val(retour ["ville_code_postal"]);
                       $("#ville_nom_reel").val(retour ["ville_nom_reel"]);

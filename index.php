@@ -32,6 +32,7 @@
 				$site-> left_sidebar=$controleur->affiche_combo_departement();
 				$site-> left_sidebar=$controleur->affiche_combo_ville();
 				$site-> left_sidebar=$controleur->affiche_info_ville();
+				$site-> left_sidebar=$controleur->ol_map();
 				$site->affiche();
 				break;
 		case 'connexion' :
