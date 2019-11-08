@@ -162,6 +162,11 @@ public function affiche_combo_ville(){
 
 public function affiche_info_ville(){
 	$vretour = '<div id="info_ville">
+								ville_departement :<input type="text" id="ville_departement" readonly></imput></br>
+								ville_code_postal :<input type="text" id="ville_code_postal" readonly></imput></br>
+								ville_nom_reel :<input type="text" id="ville_nom_reel" readonly></imput></br>
+								ville_latitude_deg :<input type="text" id="ville_latitude_deg" readonly></imput></br>
+								ville_longitude_deg :<input type="text" id="ville_longitude_deg" readonly></imput></br>
 							</div>';
 	return $vretour;
 }

@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $("#slider").css('display', 'none');
   $("#list_ville").css('display', 'none');
+  $("#info_ville").css('display', 'none');
 	} );
 function js_change_dep(){
     $("#list_ville").css('display', 'block');
@@ -42,7 +43,8 @@ function js_change_dep(){
 
   function js_change_ville(){
     var myselect = document.getElementById("list_ville");
-      $("#info_ville").empty();//vide les infos
+    $("#info_ville").css('display', 'block');// affiche info ville
+    //$("#info_ville").empty();//vide les infos
       	$.ajax({
          			      type: "POST",
               			url: "ajax/info_ville.php",
@@ -50,11 +52,11 @@ function js_change_dep(){
       			        encode: true,
               			data: "id_dep="+myselect.options[myselect.selectedIndex].value, // on envoie via post l’id
               			success: function(retour) {
-                      $("#info_ville").val(retour ["ville_departement"]);
-                      $("#info_ville").val(retour ["ville_code_postal"]);
-                      $("#info_ville").val(retour ["ville_nom_reel"]);
-                      $("#info_ville").val(retour ["ville_latitude_deg"]);
-                      $("#info_ville").val(retour ["ville_longitude_deg"]);
+                      $("#ville_departement").val(retour ["ville_departement"]);
+                      $("#ville_code_postal").val(retour ["ville_code_postal"]);
+                      $("#ville_nom_reel").val(retour ["ville_nom_reel"]);
+                      $("#ville_latitude_deg").val(retour ["ville_latitude_deg"]);
+                      $("#ville_longitude_deg").val(retour ["ville_longitude_deg"]);
          					},
          			error: function(jqXHR, textStatus)
       			{
