@@ -58,6 +58,10 @@ function js_change_dep(){
                       $("#ville_nom_reel").val(retour ["ville_nom_reel"]);
                       $("#ville_latitude_deg").val(retour ["ville_latitude_deg"]);
                       $("#ville_longitude_deg").val(retour ["ville_longitude_deg"]);
+
+                      //modif de la carte
+                      $("#map").empty();
+                      init(Number(retour ["ville_longitude_deg"]), Number(retour ["ville_latitude_deg"]));
          					},
          			error: function(jqXHR, textStatus)
       			{
@@ -71,4 +75,19 @@ function js_change_dep(){
       				else{alert("Uncaught Error.n" + jqXHR.responseText);}
       			}
          	});
+    }
+    function init(longi,latti) {
+      var posi= [ longi,latti];
+      var map = new ol.Map({
+        target: "map",
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        view: new ol.View({
+        center: ol.proj.fromLonLat(posi),
+        zoom: 14
+              })
+         });
     }

@@ -167,11 +167,12 @@ public function affiche_info_ville(){
 								ville_nom_reel :<input type="text" id="ville_nom_reel" readonly></imput></br>
 								ville_latitude_deg :<input type="text" id="ville_latitude_deg" readonly></imput></br>
 								ville_longitude_deg :<input type="text" id="ville_longitude_deg" readonly></imput></br>
-							</div>';
+							</div>
+							<div id="map" class="map"></div>';
 	return $vretour;
 }
 
-public function ol_map(){
+/*public function ol_map(){
 	$vretour = '<head>
   		<meta charset="UTF-8">
     		<script src="ol/v6.1.1-dist/ol.js"></script>
@@ -183,21 +184,7 @@ public function ol_map(){
       			}
     		</style>
    		<script >
-   			function init(longi,latti) {
-var posi= [ longi,latti];
-var map = new ol.Map({
-target: "map",
-layers: [
-new ol.layer.Tile({
-source: new ol.source.OSM()
-})
-],
-view: new ol.View({
-center: ol.proj.fromLonLat(posi),
-zoom: 14
-        					})
-     				 });
-	  		}
+
     		</script>
     		<title>Merci OpenStreetMap</title>
   	</head>
@@ -206,6 +193,6 @@ zoom: 14
    		 <div id="map" class="map"></div>
  </body>';
  return $vretour;
-}
+}*/
 }
 ?>
