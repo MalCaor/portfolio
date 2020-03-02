@@ -178,13 +178,7 @@ class page_base {
 
 
 				<article>
-					<h3>Association de la valorisation des sites touristiques de FRANCE</h3>
-										<p>12 rue des gones</br>
-										44000 NANTES</br>
-										Tel : 02.40.27.11.71</br>
-										Mail : avst44@gmai.com</p>
 
-											<a  href="Contact" class="button">Contact</a>
                 </article>
 				';
 
@@ -195,11 +189,7 @@ class page_base {
 		echo '
 		<!-- Footer -->
 			<footer>
-				<p>Site de travail Lycée CARCOUET 2019-2020 - servant de base à  l\'apprentissage PHP objet - jquery - Ajax  - Bootstrap</p>
-				<p id="copyright">
-				Mise en page PFR &copy; 2019
-				<a href="http://www.btssio-carcouet.fr/">BTS SIO Lycée CARCOUET NANTES</a>
-				</p>
+
             </footer>
 		';
 	}
@@ -231,21 +221,6 @@ class page_base {
 						<?php $this->affiche_menu(); ?>
 						<?php $this->affiche_menu_connexion(); ?>
 						<?php $this->affiche_footer_menu(); ?>
-
-  						<div style="clear:both;">
-								<div id="slider" style="height:30%;width:80%;overflow: hidden;">
-     							<?php echo $this->slider; ?>
-    						</div>
-    						<div style="float:left;width:75%;">
-     							<?php echo $this->left_sidebar; ?>
-    						</div>
-    						<div style="float:left;width:25%;">
-								<?php echo $this->right_sidebar;?>
-    						</div>
-  						</div>
-						<div style="clear:both;">
-							<?php $this->affiche_footer(); ?>
-						</div>
 					</div>
 				</body>
 			</html>
