@@ -19,24 +19,6 @@
 			$site-> left_sidebar=$controleur->retourne_article($site->titre);
 			$site->affiche();
 			break;
-		case 'departement':
-			$site->js='departement';
-			$site->js='jquery.dataTables.min';
-			$site->js='dataTables.bootstrap4.min';
-			$site->css='dataTables.bootstrap4.min';
-			$site-> left_sidebar=$controleur->dataTable();
-			$site->affiche();
-			break;
-		case 'ville':
-				$site->js='ville';
-				$site->js='ol';
-				$site->css='ol';
-				$site-> left_sidebar=$controleur->affiche_combo_departement();
-				$site-> left_sidebar=$controleur->affiche_combo_ville();
-				$site-> left_sidebar=$controleur->affiche_info_ville();
-				//$site-> left_sidebar=$controleur->ol_map();
-				$site->affiche();
-				break;
 		case 'connexion' :
 			$site->titre='Connexion';
 			$site->js='jquery.validate.min';

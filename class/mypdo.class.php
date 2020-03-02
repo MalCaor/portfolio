@@ -2,9 +2,9 @@
 class mypdo extends PDO{
 
     private $PARAM_hote='localhost'; // le chemin vers le serveur
-    private $PARAM_utilisateur='root'; // nom d'utilisateur pour se connecter
-    private $PARAM_mot_passe=''; // mot de passe de l'utilisateur pour se connecter
-    private $PARAM_nom_bd='tourisme_france_Xavier';
+    private $PARAM_utilisateur='SiteDeFrance'; // nom d'utilisateur pour se connecter
+    private $PARAM_mot_passe='SiteDeFrance'; // mot de passe de l'utilisateur pour se connecter
+    private $PARAM_nom_bd='tourisme_france';
     private $connexion;
     public function __construct() {
     	try {
