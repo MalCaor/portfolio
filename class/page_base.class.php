@@ -122,14 +122,9 @@ class page_base {
 	protected function affiche_entete() {
 		echo'
            <header>
-
-				<img  class="img-responsive"  width="292" height="136" src="'.$this->path.'/image/logo.jpg" alt="logo" style="float:left;padding: 0 10px 10px 0;"/>
 				<h1>
-					Sites de france
+					Portfolio
 				</h1>
-				<h3>
-					<strong>Bienvenue</strong> sur le site de promotion des sites touristiques de FRANCE
-				</h3>
              </header>
 		';
 	}
@@ -139,8 +134,6 @@ class page_base {
 		echo '
 				<ul >
 					<li ><a   href="'.$this->path.'/Accueil" >Accueil </a></li>
-					<li ><a   href="'.$this->path.'/departement" >departement </a></li>
-					<li ><a   href="'.$this->path.'/ville" >ville </a></li>
 				</ul>';
 	}
 	protected function affiche_menu_connexion() {
