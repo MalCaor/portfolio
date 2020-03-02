@@ -5,17 +5,17 @@
 
 /* Général */
 body {
-	color: #F0E39E;
-	background: #2C2F22;
+	color: #ffffff;
+	background: linear-gradient(357deg, rgba(2,0,36,1) 0%, rgba(44,88,112,1) 24%, rgba(0,0,0,1) 100%);
 }
 a {
-	color: #FF6533;
+	color: #ffffff;
 }
 a:hover, a:focus {
-	color: #FF4C00;
+	color: #ffffff;
 }
 strong {
-	color: #A1B55D;
+	color: #ffffff;
 }
 
 /* Button */

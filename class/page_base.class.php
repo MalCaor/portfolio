@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 class page_base {
 	protected $right_sidebar;
@@ -10,7 +10,7 @@ class page_base {
 	protected $page;
 	protected $metadescription="Bienvenue sur le site de promotion des sites touristiques de FRANCE";
 	protected $metakeyword=array('france','site touristique','tourisme','géolocalisation' );
-	protected $path='http://localhost/php_mvc_pdo_xavier';
+	protected $path='http://localhost/portfolio';
 
 	public function __construct() {
 		$numargs = func_num_args();
@@ -195,6 +195,51 @@ class page_base {
 	}
 
 
+	/****************************************** Affichage stormAudio ***************************/
+	private function affiche_stage_stormAudio() {
+		$pathO='http://localhost/portfolio';
+		$pathI=$pathO.'/image/';
+		$pathS = $pathO.'/image/stage/stormAudio/';
+		$size = 200;
+		echo '
+			<p>Lien Projet :</p>
+			<img src = "'.$pathI.'git.png" height="30"/><a href="https://github.com/MalCaor/Vumeter">Vumeter Git </a>
+			</br>
+			<img src = "'.$pathI.'git.png" height="30"/><a href="https://github.com/MalCaor/CardControlREADME">Card Manager Doc </a>
+
+			<p>Semaine 1</p>
+			<img src = "'.$pathS.'S1/bar.png" height="'.$size.'"/>
+			<img src = "'.$pathS.'S1/column.png" height="'.$size.'"/>
+			<img src = "'.$pathS.'S1/number.png" height="'.$size.'"/>
+
+			<p>Semaine 2</p>
+			<img src = "'.$pathS.'S2/vide.png" height="'.$size.'"/>
+			<img src = "'.$pathS.'S2/finAtLast.png" height="'.$size.'"/>
+			<img src = "'.$pathS.'S2/compl.png" height="'.$size.'"/>
+
+			<p>Semaine 3</p>
+			<img src = "'.$pathS.'S3/Screenshot from 2020-01-22 16-13-57.png" height="'.$size.'"/>
+			<img src = "'.$pathS.'S3/Screenshot from 2020-01-23 10-26-15.png" height="'.$size.'"/>
+			<img src = "'.$pathS.'S3/Screenshot from 2020-01-23 14-22-57.png" height="'.$size.'"/>
+
+			<p>Semaine 4</p>
+			<img src = "'.$pathS.'S4/MainBoardInfo.png" height="'.$size.'"/>
+			<img src = "'.$pathS.'S4/Screenshot from 2020-01-27 17-09-54.png" height="'.$size.'"/>
+			<img src = "'.$pathS.'S4/Screenshot from 2020-02-05 09-54-14.png" height="'.$size.'"/>
+
+			<p>Semaine 5</p>
+			<img src = "'.$pathS.'S5/Screenshot from 2020-02-06 11-05-01.png" height="'.$size.'"/>
+			<img src = "'.$pathS.'S5/Screenshot from 2020-02-06 15-03-38.png" height="'.$size.'"/>
+			<img src = "'.$pathS.'S5/Screenshot from 2020-02-07 16-51-23.png" height="'.$size.'"/>
+
+			<p>Semaine 6</p>
+			<img src = "'.$pathS.'S6/Screenshot from 2020-02-11 10-49-20.png" height="'.$size.'"/>
+			<img src = "'.$pathS.'S6/Screenshot from 2020-02-10 15-56-35.png" height="'.$size.'"/>
+			<img src = "'.$pathS.'S6/Screenshot from 2020-02-12 16-29-19.png" height="'.$size.'"/>
+		';
+	}
+
+
 
 	/********************************************* Fonction permettant l'affichage de la page ****************/
 
@@ -218,8 +263,7 @@ class page_base {
 
 						<?php $this->affiche_entete(); ?>
 						<?php $this->affiche_entete_menu(); ?>
-						<?php $this->affiche_menu(); ?>
-						<?php $this->affiche_menu_connexion(); ?>
+						<?php $this->affiche_stage_stormAudio(); ?>
 						<?php $this->affiche_footer_menu(); ?>
 					</div>
 				</body>

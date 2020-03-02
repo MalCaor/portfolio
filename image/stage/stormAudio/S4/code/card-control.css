@@ -1,0 +1,52 @@
+.corps{
+	background-color: grey;
+	display: table;
+}
+.div1{
+	background-color: #60994c;
+	border:5px solid transparent;
+}
+.div2{
+	background-color: #9b4141;
+	border:5px solid transparent;
+}
+.div3{
+	position: absolute;
+	background-color: #998f8f;
+	display: table-cell;
+	border:5px solid transparent;
+	width: 90%;
+}
+.div4{
+	background-color: #9b4141;
+}
+.police{
+	font-family:georgia,garamond,serif;
+	font-size:25px;
+	font-style: italic;
+}
+.police2{
+	font-family:georgia,garamond,serif;
+	font-size:5px;
+}
+.police3{
+	font-family:georgia,garamond,serif;
+	font-size:15px;
+}
+.button{
+	position: absolute;
+	right: 5%;
+	width: 15%;
+}
+.SNinput{
+	position: absolute;
+	left: 25%;
+	width: 50%;
+}
+.policeLabel{
+	position: relative;
+	display: contents;
+}
+.SVG{
+	position: relative;
+}

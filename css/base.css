@@ -13,12 +13,13 @@ body {
 	font-size: .8em;
 	line-height: 1.25;
 	color: black;
-	background: white;
+	background: linear-gradient(357deg, rgba(2,0,36,1) 0%, rgba(44,88,112,1) 24%, rgba(255,255,255,1) 100%);
 }
 
 /* Titres */
 h1, h2, h3, h4, h5, h6 {
 	margin: 1em 0 .5em 0;
+	color: #ffffff;
 }
 h1, h2 {
 	font-family: Georgia, "Bitstream Vera Serif", Norasi, serif;
